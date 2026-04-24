@@ -1,4 +1,4 @@
-# tri — Unified CLI for trios-server + Tailscale Funnel
+# tri-cli — Unified CLI for trios-server + Tailscale Funnel
 
 One command to make your trios-server accessible from anywhere.
 
@@ -14,16 +14,16 @@ cargo install --path .
 
 ```bash
 # Start Funnel
-tri tunnel start
+tri-cli tunnel start
 
 # Show status
-tri tunnel status
+tri-cli tunnel status
 
 # Stop Funnel
-tri tunnel stop
+tri-cli tunnel stop
 
 # Open dashboard in browser
-tri tunnel open
+tri-cli tunnel open
 ```
 
 ## Requirements

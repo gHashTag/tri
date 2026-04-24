@@ -1,4 +1,4 @@
-# tri — Manual Testing Plan
+# tri-cli — Manual Testing Plan
 
 ## Test Environment
 

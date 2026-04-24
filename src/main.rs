@@ -245,7 +245,7 @@ async fn open_dashboard() -> Result<()> {
         open::that(url)?;
         print_success("Dashboard opened in browser");
     } else {
-        print_error("Funnel is not running. Start it first with: tricli start");
+        print_error("Funnel is not running. Start it first with: tri start");
     }
     Ok(())
 }

@@ -1,4 +1,4 @@
-# tri-cli — Manual Testing Plan
+# tricli — Manual Testing Plan
 
 ## Test Environment
 
@@ -11,8 +11,8 @@
 ### TC-001: Start Funnel
 
 **Steps**:
-1. Ensure Funnel is not running (`tri-cli stop`)
-2. Run: `tri-cli start`
+1. Ensure Funnel is not running (`tricli stop`)
+2. Run: `tricli start`
 
 **Expected**:
 - Shows header with "tri"
@@ -28,8 +28,8 @@
 ### TC-002: Status When Active
 
 **Steps**:
-1. Start Funnel (`tri-cli start`)
-2. Run: `tri-cli status`
+1. Start Funnel (`tricli start`)
+2. Run: `tricli status`
 
 **Expected**:
 - Shows header with "tri"
@@ -44,8 +44,8 @@
 ### TC-003: Status When Inactive
 
 **Steps**:
-1. Stop Funnel (`tri-cli stop`)
-2. Run: `tri-cli status`
+1. Stop Funnel (`tricli stop`)
+2. Run: `tricli status`
 
 **Expected**:
 - Shows header with "tri"
@@ -61,7 +61,7 @@
 
 **Steps**:
 1. Start Funnel
-2. Run: `tri-cli stop`
+2. Run: `tricli stop`
 
 **Expected**:
 - Shows header with "tri"
@@ -76,7 +76,7 @@
 
 **Steps**:
 1. Start Funnel
-2. Run: `tri-cli open`
+2. Run: `tricli open`
 
 **Expected**:
 - Info message with URL
@@ -91,7 +91,7 @@
 
 **Steps**:
 1. Start Funnel
-2. Run: `tri-cli start` again
+2. Run: `tricli start` again
 
 **Expected**:
 - Info message "Funnel is already running!"
@@ -106,7 +106,7 @@
 
 **Steps**:
 1. Ensure Funnel is stopped
-2. Run: `tri-cli stop`
+2. Run: `tricli stop`
 
 **Expected**:
 - Shows success message
@@ -120,7 +120,7 @@
 
 **Steps**:
 1. Stop Funnel
-2. Run: `tri-cli open`
+2. Run: `tricli open`
 
 **Expected**:
 - Error message "Funnel is not running"
@@ -133,7 +133,7 @@
 ### TC-009: Help Command
 
 **Steps**:
-1. Run: `tri-cli --help`
+1. Run: `tricli --help`
 
 **Expected**:
 - Shows usage

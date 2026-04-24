@@ -14,16 +14,16 @@ cargo install --path .
 
 ```bash
 # Start Funnel
-tri-cli tunnel start
+tri-cli start
 
 # Show status
-tri-cli tunnel status
+tri-cli status
 
 # Stop Funnel
-tri-cli tunnel stop
+tri-cli stop
 
 # Open dashboard in browser
-tri-cli tunnel open
+tri-cli open
 ```
 
 ## Requirements
@@ -34,7 +34,7 @@ tri-cli tunnel open
 ## Example
 
 ```bash
-$ tri tunnel start
+$ tri-cli start
 
 ╔═══════════════════════════════════════════════════════════════╗
 ║     tri                    ║

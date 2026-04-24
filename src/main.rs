@@ -17,13 +17,6 @@ struct Cli {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    /// Tailscale Funnel management
-    #[command(subcommand)]
-    Tunnel(TunnelCommands),
-}
-
-#[derive(Subcommand, Debug)]
-enum TunnelCommands {
     /// Start the funnel
     Start {
         #[arg(short, long, default_value = "9005")]
@@ -252,7 +245,7 @@ async fn open_dashboard() -> Result<()> {
         open::that(url)?;
         print_success("Dashboard opened in browser");
     } else {
-        print_error("Funnel is not running. Start it first with: tri tunnel start");
+        print_error("Funnel is not running. Start it first with: tri-cli start");
     }
     Ok(())
 }
@@ -262,10 +255,10 @@ async fn main() -> Result<()> {
     let cli = Cli::parse();
 
     let result = match cli.command {
-        Commands::Tunnel(TunnelCommands::Start { port }) => start(port).await,
-        Commands::Tunnel(TunnelCommands::Stop) => stop().await,
-        Commands::Tunnel(TunnelCommands::Status) => status().await,
-        Commands::Tunnel(TunnelCommands::Open) => open_dashboard().await,
+        Commands::Start { port } => start(port).await,
+        Commands::Stop => stop().await,
+        Commands::Status => status().await,
+        Commands::Open => open_dashboard().await,
     };
 
     if let Err(e) = result {
